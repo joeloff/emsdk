@@ -115,7 +115,7 @@
                                   ManifestOutputPath="$(VStemp)\c\%(SwixProjects.SdkFeatureBand)"
                                   ZipFile="Workload.VSDrop.emsdk.$(MajorVersion).$(MinorVersion)-%(SwixProjects.SdkFeatureBand).components.zip"/>
       <SwixComponentsAndManifests Include="@(SwixProjects)" Condition="('%(PackageType)' == 'msi-manifest' Or '%(PackageType)' == 'component') And ('%(IsPreview)' == 'true')"
-                                  ManifestOutputPath="$(VStemp)\c\%(SwixProjects.SdkFeatureBand)"
+                                  ManifestOutputPath="$(VStemp)\c\%(SwixProjects.SdkFeatureBand).pre"
                                   ZipFile="Workload.VSDrop.emsdk.$(MajorVersion).$(MinorVersion)-%(SwixProjects.SdkFeatureBand)-pre.components.zip"/>
       <PartitionedSwixProjects Include="@(SwixWorkloadPackProjects);@(SwixComponentsAndManifests)" />
     </ItemGroup>
