@@ -121,7 +121,7 @@
       <VSDropMetadata Include="$(BUILD_SOURCEBRANCH)"/>
     </ItemGroup>
 
-    <WriteLinesToFile File="%(VSDrop.ManifestOutputPath)\.metadata" Lines="@(VSDropMetadata)" Overwrite="true" Condition="'$(OfficialBuild)' == 'true'" />
+    <WriteLinesToFile File="%(VSDrop.SourceDirectory)\.metadata" Lines="@(VSDropMetadata)" Overwrite="true" Condition="'$(OfficialBuild)' == 'true'" />
 
     <MakeDir Directories="$(ArtifactsNonShippingPackagesDir)" />
     <MakeDir Directories="$(VisualStudioSetupInsertionPath)" />
