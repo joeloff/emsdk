@@ -105,7 +105,8 @@
           ShortNames="@(ShortNames)"
           WorkloadManifestPackageFiles="@(ManifestPackages)"
           WixToolsetPath="$(WixToolsetPath)"
-          ManifestMsiVersion="$(MsiVersion)">
+          ManifestMsiVersion="$(MsiVersion)"
+          UseVisualStudioComponentPrefix="true">
       <Output TaskParameter="SwixProjects" ItemName="SwixProjects" />
       <Output TaskParameter="Msis" ItemName="Msis" />
     </CreateVisualStudioWorkload>
